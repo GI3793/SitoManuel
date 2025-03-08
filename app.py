@@ -10,9 +10,9 @@ def homepage():
 def about():
     return render_template('about.html')
 
-@app.route('/mywork')
+@app.route('/myjob')
 def mywork():
-    return render_template('mywork.html')
+    return render_template('myjob.html')
 
 @app.route('/article')
 def article():
