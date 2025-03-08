@@ -118,11 +118,19 @@ main {
 }
 
 @media (max-width: 768px) {
-    body {
-        margin: 0; /* Rimuove i margini laterali */
-        padding: 0; /* Rimuove il padding */
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
     }
+
+    header, footer {
+        width: 100%; /* Rende l'header e il footer a larghezza piena */
+        box-sizing: border-box; /* Include il padding nel calcolo della larghezza */
+    }
+
     main {
-        padding: 0; /* Rimuove il padding del contenuto */
+        padding: 0;
     }
 }
+
