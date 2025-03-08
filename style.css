@@ -119,12 +119,10 @@ main {
 
 @media (max-width: 768px) {
     body {
-        overflow-x: scroll;
-        -webkit-overflow-scrolling: touch;
+        margin: 0; /* Rimuove i margini laterali */
+        padding: 0; /* Rimuove il padding */
     }
-    html, body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
+    main {
+        padding: 0; /* Rimuove il padding del contenuto */
     }
 }
