@@ -117,20 +117,44 @@ main {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* Per schermi piccoli (fino a 768px) */
 @media (max-width: 768px) {
     body, html {
         margin: 0;
         padding: 0;
         width: 100%;
+        overflow-x: hidden; /* Rimuove lo scroll orizzontale */
     }
 
+    /* Forza il layout a larghezza piena per header e footer */
     header, footer {
-        width: 100%; /* Rende l'header e il footer a larghezza piena */
-        box-sizing: border-box; /* Include il padding nel calcolo della larghezza */
+        width: 100%;
+        box-sizing: border-box;
     }
 
+    /* Rimuove padding e margini sul main */
     main {
         padding: 0;
     }
+
+    /* Rimuove i margini laterali dalle sezioni per il mobile */
+    section {
+        max-width: 100%; /* Rimuove il limite di larghezza */
+        margin: 0; /* Rimuove i margini laterali */
+    }
+
+    /* Forza la visualizzazione del sito in modalità desktop */
+    html {
+        touch-action: manipulation; /* Evita il pinch to zoom */
+    }
 }
+
+/* Per schermi più grandi (desktop) */
+@media (min-width: 769px) {
+    section {
+        max-width: 80%; /* Lascia i margini laterali su desktop */
+        margin: 0 auto; /* Allinea la sezione al centro */
+    }
+}
+
 
