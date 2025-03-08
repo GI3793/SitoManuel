@@ -119,9 +119,12 @@ main {
 
 @media (max-width: 768px) {
     body {
-        overflow-x: auto;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
     }
-    html {
-        font-size: 100%;
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 }
