@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Manuel Luciani{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Bodoni&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: "Libre Bodoni", sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                background-image: url("{{ url_for('static', filename='images/sf.png') }}");
+                background-size: cover; /* Adatta l'immagine allo schermo */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed; /* Mantiene l'immagine fissa durante lo scrolling */
+                background-color: rgba(245, 241, 233, 0.5); /* Sfondo crema con trasparenza */
+                background-blend-mode: overlay; /* Mescola immagine e colore */
+            }
+        </style>
+    </head>
+<body>
+    <header>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">Chi sono</a>
+            <a href="/myjob">Di cosa mi occupo</a>
+            <a href="/article">Pubblicazioni e premi</a>
+            <a href="/contact">Contatti</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p><strong>Contatti:</strong></p>
+                <ul>
+                    <li>Telefono: +39 3387353638</li>
+                    <li>Email: <a href="mailto:lucianimanuel12@gmail.com">lucianimanuel12@gmail.com</a></li>
+                               <a href="mailto:manuelluciani@psypec.it">manuelluciani@psypec.it</a></li>
+                    <li>Studio Privato: Via Vincenzo Annovazzi, 15, Civitavecchia</li>
+                    <li>Albo <a href="https://ordinepsicologilazio.it/albo/manuel-luciani" target="_blank">Ordine Psicologi Lazio</a></li>
+                    <li>Docente presso <a href="https://formazionecontinuainpsicologia.it/autore/manuel-luciani/?utm_term=&utm_campaign=IT+%7C+BH+%7C+NB+%7C+N/A+%7C+Dynamic+%7C+Performance+Max+%7C+IT&utm_source=google&utm_medium=cpc&hsa_acc=4394376754&hsa_cam=21473853263&hsa_grp=&hsa_ad=&hsa_src=x&hsa_tgt=&hsa_kw=&hsa_mt=&hsa_net=adwords&hsa_ver=3&gad_source=1&gclsrc=aw.ds" target="_blank">Formazione continua in psicologia</a></li>
+                    <li>Autore in <a href="https://www.stateofmind.it/author/lucianimanuel/" target="_blank">State of Mind</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <p><strong>Mi trovi anche su:</strong></p>
+                <a href="https://www.linkedin.com/in/manuel-luciani-a07357138/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/in1.png') }}" alt="LinkedIn" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/manuelluciani.psicoterapia/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/ig1.png') }}" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100063626947726/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/fb.png') }}" alt="Facebook" class="social-icon">
+                </a>
+            </div>
+        </div>
+        <p class="footer-copyright">
+            &copy; 2025 by Dott. Manuel Luciani Psicologo, Psicoterapeuta
+        </p>
+    </footer>
+</body>
+</html>
