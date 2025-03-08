@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+<section style="max-width: 80%; margin: 0 auto;">
+
+    <!-- Titolo principale con sfondo caldo e blu scuro nel testo -->
+    <div style="background-color: #d9c8b4; padding: 15px; text-align: center; 
+                font-size: 24px; font-weight: bold; color: #006888;  /* Blu scuro */
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); border-radius: 8px;">
+        DOTT. MANUEL LUCIANI
+        <p style="color: #006888;">Psicologo, Psicoterapeuta<br>
+           A Santa Marinella, Civitavecchia e Ostia</p>
+    </div>
+
+    <br>
+
+    <!-- Contenitore dei 4 riquadri in un'unica linea -->
+    <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: nowrap;">
+
+        {% set box_style = "display: flex; flex-direction: column; align-items: center; 
+                            justify-content: space-between; text-align: center;
+                            background: rgba(245, 241, 233, 0.5); padding: 20px; border-radius: 8px;
+                            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); 
+                            flex: 1; min-width: 250px; max-width: 350px; min-height: 380px;" %}
+
+        <!-- 1° riquadro: CHI SONO -->
+        <a href="/about" style="text-decoration: none; color: inherit;">
+            <div style="{{ box_style }}">
+                <img src="{{ url_for('static', filename='images/3.jpg') }}" alt="Chi Sono" 
+                     style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                <div style="font-size: 18px; font-weight: bold; color: #006888; margin-top: 10px;"> <!-- Blu scuro -->
+                    CHI SONO
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li>La mia formazione</li>
+                    <li>La mia esperienza</li>
+                </ul>
+            </div>
+        </a>
+
+        <!-- 2° riquadro: PSICOTERAPIA E PSICOTERAPIA ONLINE -->
+        <a href="/mywork" style="text-decoration: none; color: inherit;">
+            <div style="{{ box_style }}">
+                <img src="{{ url_for('static', filename='images/2.jpg') }}" alt="Psicoterapia" 
+                     style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                <div style="font-size: 18px; font-weight: bold; color: #006888; margin-top: 10px;"> <!-- Blu scuro -->
+                    PSICOTERAPIA E PSICOTERAPIA ONLINE
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li>Psicoterapia psicodinamica integrata</li>
+                    <li>Psicoterapia focalizzata sul transfert</li>
+                    <li>Analisi transazionale</li>
+                </ul>
+            </div>
+        </a>
+
+        <!-- 3° riquadro: SOSTEGNO, PREVENZIONE E RIABILITAZIONE -->
+        <a href="/mywork" style="text-decoration: none; color: inherit;">
+            <div style="{{ box_style }}">
+                <img src="{{ url_for('static', filename='images/1.jpg') }}" alt="Riabilitazione" 
+                     style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                <div style="font-size: 18px; font-weight: bold; color: #006888; margin-top: 10px;"> <!-- Blu scuro -->
+                    SOSTEGNO, PREVENZIONE E RIABILITAZIONE
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li>Sostegno psicologico</li>
+                    <li>Prevenzione</li>
+                    <li>Servizio riabilitativo</li>
+                </ul>
+            </div>
+        </a>
+
+        <!-- 4° riquadro: CONTATTI -->
+        <a href="/contact" style="text-decoration: none; color: inherit;">
+            <div style="{{ box_style }}">
+                <img src="{{ url_for('static', filename='images/4.jpg') }}" alt="Contatti" 
+                     style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+                <div style="font-size: 18px; font-weight: bold; color: #006888; margin-top: 10px;"> <!-- Blu scuro -->
+                    CONTATTI
+                </div>
+                <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <li>Accoglienza, sicurezza, ascolto. Contattami per iniziare il tuo percorso.</li>
+                </ul>
+            </div>
+        </a>
+
+    </div>
+
+</section>
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Chi sono{% endblock %}
+
+{% block content %}
+<section style="max-width: 80%; margin: 0 auto;">
+
+    <!-- Titolo principale con sfondo crema e blu scuro nel testo -->
+    <div style="background-color: #d9c8b4; padding: 15px; text-align: center; 
+                font-size: 24px; font-weight: bold; color: #006888; /* Blu scuro */
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); border-radius: 8px;">
+        CHI SONO
+    </div>
+
+    <br>
+    <div style="background: rgba(245, 241, 233, 0.5); padding: 20px; border-radius: 8px; margin-bottom: 40px;">
+        <h2 style="text-align: center; color: #006888; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">LA MIA FORMAZIONE E LA MIA ESPERIENZA</h2>
+        <ul>
+    <!-- Contenitore per la foto e il testo, disposizione ordinata -->
+    <div style="display: flex; justify-content: center; align-items: flex-start; gap: 40px; flex-wrap: wrap;">
+
+        <!-- Testo a sinistra con margine per migliorare l'allineamento -->
+        <div style="flex: 2; text-align: justify; padding-right: 20px;">
+            <p>Mi sono Laureato in Scienze e tecniche psicologiche nel 2015, presso l'Università Lumsa di Roma, continuando il percorso nel 2017 con la Laurea Magistrale in Psicologia clinica del ciclo di vita.</p>
+            <p>Nel 2016 ho conseguito un corso semestrale sull'individuazione e gestione dei BES e DSA, presso FederPsi, Centro di Terapia Cognitivo Interpersonale. Mi sono abilitato come Psicologo nel 2019. Dal 2019 al 2021 ho fatto parte della Consulta Giovani per l'Ordine degli Psicologi del Lazio. Durante il mandato con i miei colleghi ci siamo occupati dell'orientamento formativo per giovani psicologi, oltre che della redazione di documentazione riguardante l'importanza della Laurea abilitante e diverse proposte per il tirocinio.</p>
+            <p>Dal 2016 al 2020 sono stato Volontario con l’Associazione Volontari Ospedalieri (AVO) presso l’Ospedale Pediatrico Bambino Gesù di Santa Marinella.</p>
+            <p>Nel 2016 per lo studio effettuato con la mia Tesi di Laurea Magistrale ho collaborato con il Liceo Galileo Galilei di Civitavecchia presso la sede di Santa Marinella.</p>
+            <p>Nel 2017 ho svolto un Tirocinio in Psicologia presso l’Istituto Italiano di Sessuologia Scientifica di Roma.
+            <p>Nel 2018 mi sono iscritto presso l'Istituto di Psicoterapia Psicodinamica Integrata (IPPI) di Firenze, il percorso formativo ed evolutivo più importante della mia vita. Mi sono diplomato con Lode come Psicoterapeuta nel Giugno 2023. Ad oggi ricopro il ruolo di Tutor.</p>
+            <p>Nel 2018, seppur per un breve periodo, ho svolto un Programma di Tirocinio presso la Società Cooperativa Sociale ONLUS “Il Ponte” di Civitavecchia.</p>
+            <p>Dal 2018 prima come Tirocinante e dall’anno successivo come Psicologo collaboro con la Fondazione Inclusione Salute e cura Roma Litorale ETS di Ostia. Dal 2023 la collaborazione si è ampliato anche presso il Dipartimento di Psicoterapia come psicoterapeuta.</p>
+            <p>Nel 2019 ho lavorato presso la Repubblica dei Ragazzi a Civitavecchia.
+            <p>Dal 2019 AL 2021 Membro della Consulta Giovani Ordine Psicologi Lazio, redigendo diversi documenti, confronti con giovani psicologi ed il Consiglio dell’Ordine, ed organizzando incontri formativi.</p>
+            <p>Dal 2019 sono in analisi didattica personale presso uno psicoterapeuta il cui approccio è quello dell’Analisi Transazionale Psicodinamica e Psicoanalitica. Tra le motivazioni la forte credenza che in questa professione ciò che fa la differenza è l’addestramento personale nelle sue diverse forme.</p>
+            <p>Nel 2021 ho ottenuto il titolo di "Didacting Training Graduate" nella Psicoterapia Focalizzata sul Transfert (TFP). Approccio evidence-based di stampo psicodinamico, ideato da Otto Kernberg e di cui continuo gli approfondimenti. Del medesimo approccio, nel 2017 ho terminato la formazione per la valutazione dei disturbi della personalità in adolescenza tramite lo strumento IPOP-A, utilizzandolo anche per la mia tesi magistrale.</p>
+            <p>Nel 2021 ho effettuato il mio primo corso di 101 in Analisi Transazionale, teoria che mi sta molto a cuore e di cui sto continuando la formazione. Ad oggi sono iscritto all’AIAT ed allievo in supervisione in contratto con l’EATA/ITAA nell’ambito della Psicoterapia.</p>
+            <p>Dal 2022 studio il Professional Coaching, Counseling, le metodologie di studio, la Programmazione Neurolinguistica e la Mindfulness, presso l'"Associazione Diversa-mente Insieme APS", insieme a colleghi e maestri della mia scuola di psicoterapia.</p>
+            <p>Nel 2024 durante la partecipazione al Congresso della Federazione Italiana Associazioni di Psicoterapia (FIAP) sono stato premiato con il Primo premio giovani per la Clinica.</p>
+            <p>Dal 2018 ad oggi mi occupo anche di Riabilitazione per adulti ed adolescenti con disturbi del Neurosviluppo.</p>
+            <p>Dal 2021 a Civitavecchia e presto anche a Santa Marinella mi occupo di Psicoterapia per adulti, adolescenti, bambini e coppie.</p>
+            <p>Dal 2024 coordino il servizio di Psicologia presso una scuola secondaria di secondo grado ad Ostia.</p>
+            <p>Nel 2025 inizio la formazione in Contextual Neuro-Somatic Awarness. Un percorso formativo basato su tecniche autoipnotiche.</p>
+            <p>Docente presso il sito di Formazione Continua in Psicologia (FCP), Autore di articoli per State of Mind. Le pubblicazioni scientifiche sono nella sezione Pubblicazioni.
+            </p>
+        </div>
+
+        <!-- Foto a destra con uno spazio di bordo adeguato -->
+        <div style="flex: 1; align-self: flex-start;">
+            <img src="{{ url_for('static', filename='images/ml.jpeg') }}" alt="Foto profilo" 
+                 style="width: 90%; height: auto; border-radius: 1px;">
+        </div>
+    </div>
+</section>
+{% endblock %}

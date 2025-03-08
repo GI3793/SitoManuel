@@ -1,0 +1,117 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #006888;
+    color: #ffecd5;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
+footer {
+    background-color: #006888; /* Sfondo scuro */
+    color: #ffecd5; /* Testo bianco */
+    font-size: 0.8em; /* Testo più piccolo */
+    padding: 10px 10px; /* Spaziatura interna */
+    text-align: left; /* Allinea a sinistra inizialmente */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Dividi il contenuto tra sinistra e destra */
+    max-width: 1200px; /* Larghezza massima del footer */
+    margin: 0 auto; /* Centra il contenuto */
+}
+
+.footer-left,
+.footer-right {
+    width: 45%; /* Assegna spazio alle due sezioni */
+}
+
+.footer-left ul {
+    list-style-type: none; /* Rimuove i punti elenco */
+    padding: 0; /* Elimina margini interni */
+}
+
+.footer-left ul li {
+    margin: 1px 0; /* Spaziatura tra le righe */
+}
+
+.footer-right {
+    text-align: right; /* Allinea il contenuto a destra */
+}
+
+.social-icon {
+    width: 24px; /* Dimensione dell'icona */
+    height: 24px;
+    margin: 0 5px; /* Spaziatura tra le icone */
+    vertical-align: middle;
+}
+
+footer a {
+    color: #1e90ff; /* Colore dei link */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    text-align: center; /* Testo centrato */
+    margin-top: 20px; /* Spazio sopra il copyright */
+    font-size: 0.7em; /* Testo ancora più piccolo */
+}
+
+main {
+    padding: 20px;
+    margin: 20px;
+}
+
+/* Stile per la sezione hero */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px; /* Distanza interna */
+}
+
+.hero-section h1 {
+    font-size: 2.5em; /* Dimensione grande per il titolo */
+    margin-bottom: 20px; /* Distanza tra il titolo e il paragrafo */
+}
+
+.hero-section p {
+    font-size: 1.2em; /* Dimensione del paragrafo */
+    margin-bottom: 30px; /* Distanza tra il paragrafo e l'immagine */
+}
+
+.hero-image {
+    width: 80%; /* Imposta la larghezza dell'immagine al 80% della larghezza del contenitore */
+    max-width: 800px; /* Limita la larghezza massima dell'immagine */
+    height: auto; /* Mantiene il rapporto di aspetto dell'immagine */
+    border-radius: 5px; /* Rende gli angoli dell'immagine arrotondati */
+}
+
+.homepage-title {
+    background-color: #e5e5e5; /* Sfondo grigio */
+    padding: 15px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombreggiatura */
+}
+

@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}Contatti{% endblock %}
+
+{% block content %}
+<section style="max-width: 80%; margin: 0 auto;">
+
+    <!-- Titolo principale con sfondo crema e testo blu ottanio -->
+    <div style="background-color: #d9c8b4; padding: 15px; text-align: center; 
+                font-size: 24px; font-weight: bold; color: #006888;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); border-radius: 8px;">
+        CONTATTI
+    </div>
+    <br>
+
+    <div style="background: rgba(245, 241, 233, 0.5); padding: 20px; border-radius: 8px; margin-bottom: 40px;">
+        <div style="display: flex; justify-content: center; align-items: flex-start; font-size: 16px">
+            <div style="flex: 2; padding-right: 20px;">
+
+                <p>Il primo passo verso il cambiamento è una scelta personale profonda, spesso guidata da profonde ragioni psicologiche. Qualunque esse siano, troverai un ambiente sicuro, accogliente e riservato, dove potremo per costruire insieme un percorso possibile.</p>
+                <p>Ogni persona è unica e può sentirsi libera di scegliere il meglio. Se desideri iniziare questo percorso su misura, ecco come contattarmi:
+                </p>
+                <br>
+
+                <!-- Contatti con icone -->
+                <p><strong>📧e-mail:</strong>
+                <p><a href="mailto:lucianimanuel12@gmail.com">lucianimanuel12@gmail.com</a>
+                <p><a href="mailto:manuelluciani@psypec.it">manuelluciani@psypec.it</a><br>
+                </p><br>
+                <p><strong>📞Telefono:</strong>
+                <p>+39 338 735 3638</p><br>
+                </p>
+                <p>
+                <strong>📍Studio:</strong> 
+                <p>Via Vincenzo Annovazzi, 15, Civitavecchia
+                </p>
+                <br>
+                <strong>💻Servizi online:</strong> 
+                <p>Psicologia e Psicoterapia Online, accessibile in modo semplice e sicuro.</p><br>
+
+                <strong>🌍Sedi di intervento:</strong> 
+                <p>Servizio di Prevenzione, Psicologia Scolastica, Riabilitazione a Civitavecchia, Santa Marinella e Ostia.</p><br>
+
+                <!-- Link utili -->
+                <p><strong>Per ulteriori approfondimenti:</strong></p>
+                <p>📌 <a href="https://ordinepsicologilazio.it/albo/manuel-luciani" target="_blank">Albo Ordine Psicologi Lazio</a></p>
+                <p>📌 <a href="https://formazionecontinuainpsicologia.it/autore/manuel-luciani/" target="_blank">Docente - Formazione Continua in Psicologia</a></p>
+                <p>📌 <a href="https://www.stateofmind.it/author/lucianimanuel/" target="_blank">Autore - State of Mind</a></p>
+                <br>
+
+                <!-- Social -->
+                <p><strong>Mi trovi anche su:</strong></p>
+                <a href="https://www.linkedin.com/in/manuel-luciani-a07357138/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/in1.png') }}" alt="LinkedIn" width="30">
+                </a>
+                <a href="https://www.instagram.com/manuelluciani.psicoterapia/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/ig1.png') }}" alt="Instagram" width="30">
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100063626947726/" target="_blank">
+                    <img src="{{ url_for('static', filename='images/fb.png') }}" alt="Facebook" width="30">
+                </a>
+
+            </div>
+
+            <!-- Colonna con immagine e Google Maps -->
+            <div style="flex: 1; text-align: center; display: flex; flex-direction: column; align-items: center;">
+                <img src="{{ url_for('static', filename='images/contact.jpg') }}" alt="Studio Psicologico" 
+                     style="width: 90%; height: auto; border-radius: 5px; margin-bottom: 15px;">
+                
+                <!-- Google Maps -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.492201336268!2d11.800502676015896!3d42.09092887116716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f72b9c3d749b5%3A0xc6e3dfcd00d0f045!2sVia%20Vincenzo%20Annovazzi%2C%2015%2C%2000000%20Civitavecchia%20RM%2C%20Italia!5e0!3m2!1sit!2sit!4v1700000000000" 
+                    width="90%" height="250" style="border-radius: 5px; border: 0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

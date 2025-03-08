@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %}Di cosa mi occupo{% endblock %}
+
+{% block content %}
+<section style="max-width: 80%; margin: 0 auto;">
+
+    <!-- Titolo principale con sfondo crema e blu scuro nel testo -->
+    <div style="background-color: #d9c8b4; padding: 15px; text-align: center; 
+                font-size: 24px; font-weight: bold; color: #006888;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); border-radius: 8px;">
+        DI COSA MI OCCUPO
+    </div>
+
+    <br>
+    
+    <!-- Sezione 1: Psicoterapia e Psicoterapia Online -->
+    <div style="background: rgba(245, 241, 233, 0.5); padding: 20px; border-radius: 8px; margin-bottom: 40px;">
+        <!-- Titolo della sezione -->
+        <h2 style="text-align: center; color: #006888; 
+                   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
+        PSICOTERAPIA E PSICOTERAPIA ONLINE
+        <h2 style="text-align: center; color: #006888; font-size: 16px;
+                   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
+            <p>Santa Marinella, Civitavecchia</p>
+        </h2>
+        <!-- Contenitore flessibile per immagine e testo -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap;">
+            <!-- Immagine a sinistra, centrata -->
+            <div style="flex: 1; text-align: center; display: flex; justify-content: center; align-items: center;">
+                <img src="{{ url_for('static', filename='images/note.jpeg') }}" alt="Psicoterapia" 
+                     style="width: 80%; height: auto; border-radius: 1px;">
+            </div>
+            <!-- Testo a destra -->
+            <div style="flex: 2; text-align: justify;">
+                <p><strong>LA PSICOTERAPIA PSICODINAMICA INTEGRATA</strong><br>
+                    È il Metamodello per la cura in Psicoterapia che ho appreso e continuo ad approfondire anche dopo il diploma in qualità di Tutor presso l’Istituto di Psicoterapia Psicodinamica Integrata con sede a Firenze. Questo Metamodello rappresenta la cornice di riferimento centrale del mio approccio psicoterapico.
+                </p>
+                <p><strong>LA PSICOTERAPIA FOCALIZZATA SUL TRANSFERT</strong><br>
+                    La Transference-Focused Psychotherapy è il prodotto del gruppo diretto da Otto Kernberg presso il Personality Disorders Institute del Weill Cornell Medical College. Ricopre un posto di rilievo tra le psicoterapie basate sull’evidenza.
+                </p>
+                <p><strong>L’ANALISI TRANSAZIONALE</strong><br>
+                    L’Analisi Transazionale è una teoria della personalità ed un sistema di psicoterapia, con applicazioni anche nel Counseling, per i Gruppi e nel mondo delle Organizzazioni. È stata ideata sin dalla metà degli anni ’50 da Eric Berne. A mio parere è un modo di intendere la psiche molto intuitivo e comprensibile, che permette al paziente di conoscersi meglio senza perdere la profondità dell’eredità psicoanalitica.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sezione 2: Sostegno, Prevenzione e Riabilitazione -->
+    <div style="background: rgba(245, 241, 233, 0.5); padding: 20px; border-radius: 8px;">
+        <!-- Titolo della sezione -->
+        <h2 style="text-align: center; color: #006888; 
+                   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
+            SOSTEGNO, PREVENZIONE E RIABILITAZIONE
+            <h2 style="text-align: center; color: #006888; font-size: 16px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
+     <p>Santa Marinella, Civitavecchia, Ostia</p>
+    </h2>
+        <!-- Contenitore flessibile per testo e immagine -->
+        <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap;">
+            <!-- Testo a sinistra -->
+            <div style="flex: 2; text-align: justify;">
+                <p><strong>SOSTEGNO PSICOLOGICO O CONSULENZA</strong><br>
+                    Si rivolge al singolo individuo, affrontando tematiche come la genitorialità. Offrire un sostegno psicologico significa cercare insieme un modo per superare un momento di stress o difficoltà.
+                </p>
+                <p><strong>PREVENZIONE</strong><br>
+                    L’obiettivo è promuovere il benessere psicofisico tramite la creazione di un progetto ad hoc, che può essere strutturato in base al tipo di intervento richiesto. Gli ambiti spaziano da scuole a contesti sportivi.
+                </p>
+                <p><strong>SERVIZIO RIABILITATIVO</strong><br>
+                    L’esperienza maturata nella Riabilitazione per adulti ed adolescenti con disturbi del neurosviluppo mi ha portato a sviluppare un metodo di intervento in cui la relazione è al centro del progetto.
+                </p>
+            </div>
+            <!-- Immagine a destra, centrata -->
+            <div style="flex: 1; text-align: center; display: flex; justify-content: center; align-items: center;">
+                <img src="{{ url_for('static', filename='images/hand.jpg') }}" alt="Riabilitazione" 
+                     style="width: 80%; height: auto; border-radius: 1px;">
+            </div>
+        </div>
+    </div>
+
+</section>
+{% endblock %}
