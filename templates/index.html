@@ -3,13 +3,13 @@
 {% block title %}Homepage{% endblock %}
 
 {% block content %}
-<section style="max-width: 90%; margin: 0 auto; display: flex; justify-content: center;">
+<section style="max-width: 90%; margin: 0 auto; display: flex; flex-direction: column; align-items: center;">
 
     <!-- Titolo principale -->
     <div style="padding: 20px; text-align: center; 
             font-size: 28px; font-weight: bold; color: #006888; 
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); border-radius: 6px;
-            width: 90%; margin: 20px auto; display: block;">
+            width: 100%; margin: 20px auto;">
         <p style="font-size: 36px; font-weight: bold; margin: 5px 0;">
             DOTT. MANUEL LUCIANI
         </p>
@@ -27,8 +27,8 @@
 
     <br>
 
-   <!-- Contenitore dei 4 riquadri -->
-    <div style="display: flex; flex-direction: column; gap: 20px; justify-content: center; flex-wrap: nowrap; max-width: 90%; margin: 0 auto;">
+   <!-- Contenitore dei 4 riquadri centrato sotto il titolo -->
+    <div style="display: flex; flex-direction: column; gap: 20px; justify-content: center; align-items: center; flex-wrap: nowrap; max-width: 90%; margin: 0 auto;">
         
         {% set box_style = "display: flex; flex-direction: row; align-items: center; 
                             justify-content: flex-start; text-align: left; background: rgba(245, 241, 233, 0.5); 
