@@ -1,13 +1,19 @@
 /* Carica il font da Google Fonts */
 
-body {
+@font-face {
     font-family: "Libre Bodoni";
-    src: url('C:/Users/tomma/OneDrive/Desktop/sito/static/fonts/static/LibreBodoni-Regular.ttf') format('ttf');
+    src: url("../fonts/LibreBodoni-VariableFont_wght.ttf") format("truetype");
+    font-weight: normal;
     font-style: normal;
+}
+
+body {
+    font-family: "Libre Bodoni", serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
+
 
 header {
     background: #006888;
