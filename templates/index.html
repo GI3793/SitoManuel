@@ -6,7 +6,7 @@
 <section style="max-width: 80%; margin: 0 auto;">
 
     <!-- Titolo principale -->
-    <div style="background-color: rgba(245, 241, 233, 0.3); padding: 20px; text-align: center; 
+    <div style="padding: 20px; text-align: center; 
             font-size: 28px; font-weight: bold; color: #006888; 
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); border-radius: 6px;
             width: 90%; margin: 20px auto; display: block;">
@@ -33,25 +33,9 @@
         {% set box_style = "display: flex; flex-direction: row; align-items: flex-start; 
                             justify-content: flex-start; text-align: left; background: rgba(245, 241, 233, 0.5); 
                             padding: 20px; border-radius: 8px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); 
-                            flex: 1; min-width: 250px; max-width: 90%; min-height: 380px;" %}
+                            flex: 1; min-width: 250px; max-width: 90%;" %}
         
-        <!-- 1° riquadro: CHI SONO -->
-        <a href="/about" style="text-decoration: none; color: inherit;">
-            <div style="{{ box_style }}">
-                <div style="width: 30%; margin-right: 10px;">
-                    <img src="{{ url_for('static', filename='images/3.jpg') }}" alt="Chi Sono" 
-                         style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
-                </div>
-                <div style="width: 70%; font-size: 18px; color: #006888; margin-top: 10px;">
-                    <div style="font-weight: bold;">CHI SONO</div>
-                    <ul style="list-style: none; padding: 0; font-size: 14px;">
-                        <li>La mia formazione</li>
-                        <li>La mia esperienza</li>
-                    </ul>
-                </div>
-            </div>
-        </a>
-
+        
         <!-- 2° riquadro: PSICOTERAPIA E PSICOTERAPIA ONLINE -->
         <a href="/myjob" style="text-decoration: none; color: inherit;">
             <div style="{{ box_style }}">
@@ -59,9 +43,9 @@
                     <img src="{{ url_for('static', filename='images/2.jpg') }}" alt="Psicoterapia" 
                          style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
                 </div>
-                <div style="width: 70%; font-size: 18px; color: #006888; margin-top: 10px;">
+                <div style="width: 70%; font-size: 24px; color: #006888; margin-top: 10px;">
                     <div style="font-weight: bold;">PSICOTERAPIA</div>
-                    <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <ul style="list-style: none; padding: 0; font-size: 18px;">
                         <li>In presenza e Online. Individuale o di coppia. Adulti, Adolescenti, Bambini</li>
                         <li><strong>A cosa serve?</strong></li>
                         <li>✅ Prendere consapevolezza. "Voglio capire; Voglio esplorare come mai accade questo"</li>
@@ -80,12 +64,11 @@
                     <img src="{{ url_for('static', filename='images/1.jpg') }}" alt="Riabilitazione" 
                          style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
                 </div>
-                <div style="width: 70%; font-size: 18px; color: #006888; margin-top: 10px;">
+                <div style="width: 70%; font-size: 24px; color: #006888; margin-top: 10px;">
                     <div style="font-weight: bold;">SOSTEGNO, PREVENZIONE E RIABILITAZIONE</div>
-                    <ul style="list-style: none; padding: 0; font-size: 14px;">
-                        <li>Sostegno psicologico</li>
-                        <li>Prevenzione</li>
-                        <li>Servizio riabilitativo</li>
+                    <ul style="list-style: none; padding: 0; font-size: 18px;">
+                        <li>🌱La riabilitazione psicologica comprende quelle attività volte al recupero di abilità o competenze che hanno subito un deterioramento dovuto a deficit neuropsicologici o dipendenze.</li>
+                        <li>🌱Il sostegno psicologico è tenuto verso il benessere della persona, del gruppo o di una istituzione. L'obiettivo può essere il miglioramento della qualità della vita potenziando i punti di forza per adattarsi alle situazioni di disagio. </li>
                     </ul>
                 </div>
             </div>
@@ -98,9 +81,9 @@
                     <img src="{{ url_for('static', filename='images/4.jpg') }}" alt="Contatti" 
                          style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
                 </div>
-                <div style="width: 70%; font-size: 18px; color: #006888; margin-top: 10px;">
+                <div style="width: 70%; font-size: 24px; color: #006888; margin-top: 10px;">
                     <div style="font-weight: bold;">CONTATTI</div>
-                    <ul style="list-style: none; padding: 0; font-size: 14px;">
+                    <ul style="list-style: none; padding: 0; font-size: 18px;">
                         <li>Accoglienza, sicurezza, ascolto. Contattami per iniziare il tuo percorso.</li>
                     </ul>
                 </div>
