@@ -1,5 +1,9 @@
+/* Carica il font da Google Fonts */
+
 body {
-    font-family: "Libre Bodoni", Sans-serif;
+    font-family: "Libre Bodoni";
+    src: url('C:/Users/tomma/OneDrive/Desktop/sito/static/fonts/static/LibreBodoni-Regular.ttf') format('ttf');
+    font-style: normal;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -24,47 +28,47 @@ header nav a:hover {
 
 /* Footer styling */
 footer {
-    background-color: #006888; /* Sfondo scuro */
-    color: #ffecd5; /* Testo bianco */
-    font-size: 0.8em; /* Testo più piccolo */
-    padding: 10px 10px; /* Spaziatura interna */
-    text-align: left; /* Allinea a sinistra inizialmente */
+    background-color: #006888;
+    color: #ffecd5;
+    font-size: 0.8em;
+    padding: 10px 10px;
+    text-align: left;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between; /* Dividi il contenuto tra sinistra e destra */
-    max-width: 1200px; /* Larghezza massima del footer */
-    margin: 0 auto; /* Centra il contenuto */
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer-left,
 .footer-right {
-    width: 45%; /* Assegna spazio alle due sezioni */
+    width: 45%;
 }
 
 .footer-left ul {
-    list-style-type: none; /* Rimuove i punti elenco */
-    padding: 0; /* Elimina margini interni */
+    list-style-type: none;
+    padding: 0;
 }
 
 .footer-left ul li {
-    margin: 1px 0; /* Spaziatura tra le righe */
+    margin: 1px 0;
 }
 
 .footer-right {
-    text-align: right; /* Allinea il contenuto a destra */
+    text-align: right;
 }
 
 .social-icon {
-    width: 24px; /* Dimensione dell'icona */
+    width: 24px;
     height: 24px;
-    margin: 0 5px; /* Spaziatura tra le icone */
+    margin: 0 5px;
     vertical-align: middle;
 }
 
 footer a {
-    color: #1e90ff; /* Colore dei link */
+    color: #1e90ff;
     text-decoration: none;
 }
 
@@ -73,9 +77,9 @@ footer a:hover {
 }
 
 .footer-copyright {
-    text-align: center; /* Testo centrato */
-    margin-top: 20px; /* Spazio sopra il copyright */
-    font-size: 0.7em; /* Testo ancora più piccolo */
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.7em;
 }
 
 main {
@@ -83,35 +87,75 @@ main {
     margin: 20px;
 }
 
-/* Stile per la sezione hero */
 .hero-section {
     text-align: center;
-    padding: 50px 20px; /* Distanza interna */
+    padding: 50px 20px;
 }
 
 .hero-section h1 {
-    font-size: 2.5em; /* Dimensione grande per il titolo */
-    margin-bottom: 20px; /* Distanza tra il titolo e il paragrafo */
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
 .hero-section p {
-    font-size: 1.2em; /* Dimensione del paragrafo */
-    margin-bottom: 30px; /* Distanza tra il paragrafo e l'immagine */
+    font-size: 1.2em;
+    margin-bottom: 30px;
 }
 
 .hero-image {
-    width: 80%; /* Imposta la larghezza dell'immagine al 80% della larghezza del contenitore */
-    max-width: 800px; /* Limita la larghezza massima dell'immagine */
-    height: auto; /* Mantiene il rapporto di aspetto dell'immagine */
-    border-radius: 5px; /* Rende gli angoli dell'immagine arrotondati */
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 5px;
 }
 
 .homepage-title {
-    background-color: #e5e5e5; /* Sfondo grigio */
+    background-color: #e5e5e5;
     padding: 15px;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Ombreggiatura */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+/* Per schermi piccoli (fino a 768px) */
+@media (max-width: 768px) {
+    body, html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden; /* Rimuove lo scroll orizzontale */
+    }
+
+    /* Forza il layout a larghezza piena per header e footer */
+    header, footer {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Rimuove padding e margini sul main */
+    main {
+        padding: 0;
+    }
+
+    /* Rimuove i margini laterali dalle sezioni per il mobile */
+    section {
+        max-width: 100%; /* Rimuove il limite di larghezza */
+        margin: 0; /* Rimuove i margini laterali */
+    }
+
+    /* Forza la visualizzazione del sito in modalità desktop */
+    html {
+        touch-action: manipulation; /* Evita il pinch to zoom */
+    }
+}
+
+/* Per schermi più grandi (desktop) */
+@media (min-width: 769px) {
+    section {
+        max-width: 80%; /* Lascia i margini laterali su desktop */
+        margin: 0 auto; /* Allinea la sezione al centro */
+    }
+}
+
 
