@@ -3,7 +3,7 @@
 {% block title %}Homepage{% endblock %}
 
 {% block content %}
-<section style="max-width: 90%; margin: 0 auto;">
+<section style="max-width: 90%; margin: 0 auto; display: flex; justify-content: center;">
 
     <!-- Titolo principale -->
     <div style="padding: 20px; text-align: center; 
@@ -30,20 +30,19 @@
    <!-- Contenitore dei 4 riquadri -->
     <div style="display: flex; flex-direction: column; gap: 20px; justify-content: center; flex-wrap: nowrap; max-width: 90%; margin: 0 auto;">
         
-        {% set box_style = "display: flex; flex-direction: row; align-items: flex-start; 
+        {% set box_style = "display: flex; flex-direction: row; align-items: center; 
                             justify-content: flex-start; text-align: left; background: rgba(245, 241, 233, 0.5); 
                             padding: 20px; border-radius: 8px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); 
-                            flex: 1; min-width: 250px; max-width: 90%;" %}
-        
+                            flex: 1; min-width: 250px; max-width: 90%; margin: 0 auto;" %}
         
         <!-- 2° riquadro: PSICOTERAPIA E PSICOTERAPIA ONLINE -->
         <a href="/myjob" style="text-decoration: none; color: inherit;">
             <div style="{{ box_style }}">
                 <div style="width: 30%; margin-right: 10px;">
                     <img src="{{ url_for('static', filename='images/2.jpg') }}" alt="Psicoterapia" 
-                         style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
+                         style="width: 100%; height: 200px; object-fit: contain; border-radius: 6px;">
                 </div>
-                <div style="width: 70%; font-size: 24px; color: #006888; margin-top: 10px;">
+                <div style="width: 70%; font-size: 24px; color: #004f59; margin-top: 10px;">
                     <div style="font-weight: bold;">PSICOTERAPIA</div>
                     <ul style="list-style: none; padding: 0; font-size: 16px;">
                         <li>In presenza e Online. Individuale o di coppia. Adulti, Adolescenti, Bambini</li>
@@ -62,9 +61,9 @@
             <div style="{{ box_style }}">
                 <div style="width: 30%; margin-right: 10px;">
                     <img src="{{ url_for('static', filename='images/1a.jpg') }}" alt="Riabilitazione" 
-                         style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
+                         style="width: 100%; height: 200px; object-fit: contain; border-radius: 6px;">
                 </div>
-                <div style="width: 70%; font-size: 24px; color: #006888; margin-top: 10px;">
+                <div style="width: 70%; font-size: 24px; color: #004f59; margin-top: 10px;">
                     <div style="font-weight: bold;">SOSTEGNO, PREVENZIONE E RIABILITAZIONE</div>
                     <ul style="list-style: none; padding: 0; font-size: 16px;">
                         <li>🌱La riabilitazione psicologica comprende quelle attività volte al recupero di abilità o competenze che hanno subito un deterioramento dovuto a deficit neuropsicologici o dipendenze.</li><br>
@@ -79,12 +78,13 @@
             <div style="{{ box_style }}">
                 <div style="width: 30%; margin-right: 10px;">
                     <img src="{{ url_for('static', filename='images/4.jpg') }}" alt="Contatti" 
-                         style="width: 100%; height: 200px; object-fit: cover; border-radius: 6px;">
+                         style="width: 100%; height: 200px; object-fit: contain; border-radius: 6px;">
                 </div>
-                <div style="width: 70%; font-size: 24px; color: #006888; margin-top: 10px;">
+                <div style="width: 70%; font-size: 24px; color: #004f59; margin-top: 10px;">
                     <div style="font-weight: bold;">CONTATTI</div>
                     <ul style="list-style: none; padding: 0; font-size: 16px;">
-                        <li>Accoglienza, sicurezza, ascolto. Contattami per iniziare il tuo percorso.</li>
+                        <li>🧠Accoglienza, sicurezza, ascolto.❤️</li>
+                        <li>👉Contattami per iniziare il tuo percorso.</li>
                     </ul>
                 </div>
             </div>
