@@ -5,9 +5,8 @@
 {% block content %}
 <section style="max-width: 100%; margin: 0 auto;">
 
-    <!-- Titolo principale con sfondo crema e blu scuro nel testo -->
-    <div style="padding: 15px; text-align: center; 
-                font-size: 28px; font-weight: bold; color: #d59245;
+    <!-- Titolo principale -->
+    <div style="padding: 15px; text-align: center; font-size: 33px; font-weight: bold; color: #d59245;
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); border-radius: 6px;">
         DI COSA MI OCCUPO
     </div>
@@ -16,31 +15,35 @@
     
     <!-- Sezione 1: Psicoterapia e Psicoterapia Online -->
     <div style="background: rgba(245, 241, 233, 0.5); padding: 20px; border-radius: 6px; margin-bottom: 40px;">
-        <!-- Titolo della sezione -->
-        <h2 style="text-align: center; color: #006888; 
-                   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
-        PSICOTERAPIA E PSICOTERAPIA ONLINE
-        <h2 style="text-align: center; color: #006888; font-size: 16px;
-                   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
+        <h2 style="text-align: center; color: #006888; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
+            PSICOTERAPIA E PSICOTERAPIA ONLINE
+        </h2>
+        <h2 style="text-align: center; color: #006888; font-size: 16px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
             <p>Santa Marinella, Civitavecchia</p>
         </h2>
-        <!-- Contenitore flessibile per immagine e testo -->
+
         <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap;">
-            <!-- Immagine a sinistra, centrata -->
-            <div style="flex: 1; text-align: center; display: flex; justify-content: center; align-items: center;">
-                <img src="{{ url_for('static', filename='images/note1.jpeg') }}" alt="Psicoterapia" 
+            <!-- Contenitore immagine con testo al passaggio del mouse -->
+            <div style="flex: 1; text-align: center; display: flex; justify-content: center; align-items: center; position: relative;">
+                <img src="{{ url_for('static', filename='images/note1.jpg') }}" alt="Psicoterapia" 
                      style="width: 80%; height: auto; border-radius: 1px;">
+                <div style="position: absolute; bottom: 5px; background: rgba(0, 0, 0, 0.6); 
+                            color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; 
+                            opacity: 0; transition: opacity 0.3s ease;">
+                    Immagine presa da <strong>www.freepik.com</strong>
+                </div>
             </div>
+
             <!-- Testo a destra -->
             <div style="flex: 2; text-align: justify;">
                 <p><strong>LA PSICOTERAPIA PSICODINAMICA INTEGRATA</strong><br>
-                    È il Metamodello per la cura in Psicoterapia che ho appreso e continuo ad approfondire anche dopo il diploma in qualità di Tutor presso l’Istituto di Psicoterapia Psicodinamica Integrata con sede a Firenze. Questo Metamodello rappresenta la cornice di riferimento centrale del mio approccio psicoterapico.
+                    È il Metamodello per la cura in Psicoterapia che ho appreso e continuo ad approfondire anche dopo il diploma in qualità di Tutor presso l’Istituto di Psicoterapia Psicodinamica Integrata con sede a Firenze.
                 </p>
                 <p><strong>LA PSICOTERAPIA FOCALIZZATA SUL TRANSFERT</strong><br>
-                    La Transference-Focused Psychotherapy è il prodotto del gruppo diretto da Otto Kernberg presso il Personality Disorders Institute del Weill Cornell Medical College. Ricopre un posto di rilievo tra le psicoterapie basate sull’evidenza.
+                    La Transference-Focused Psychotherapy è il prodotto del gruppo diretto da Otto Kernberg presso il Personality Disorders Institute del Weill Cornell Medical College.
                 </p>
                 <p><strong>L’ANALISI TRANSAZIONALE</strong><br>
-                    L’Analisi Transazionale è una teoria della personalità ed un sistema di psicoterapia, con applicazioni anche nel Counseling, per i Gruppi e nel mondo delle Organizzazioni. È stata ideata sin dalla metà degli anni ’50 da Eric Berne. A mio parere è un modo di intendere la psiche molto intuitivo e comprensibile, che permette al paziente di conoscersi meglio senza perdere la profondità dell’eredità psicoanalitica.
+                    L’Analisi Transazionale è una teoria della personalità e un sistema di psicoterapia ideato da Eric Berne.
                 </p>
             </div>
         </div>
@@ -48,49 +51,46 @@
     
     <!-- Sezione 2: Sostegno, Prevenzione e Riabilitazione -->
     <div style="background: rgba(245, 241, 233, 0.5); padding: 20px; border-radius: 6px;">
-        <!-- Titolo della sezione -->
-        <h2 style="text-align: center; color: #006888; 
-                   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
+        <h2 style="text-align: center; color: #006888; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
             SOSTEGNO, PREVENZIONE E RIABILITAZIONE
-            <h2 style="text-align: center; color: #006888; font-size: 16px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
-     <p>Santa Marinella, Civitavecchia, Ostia</p>
-    </h2>
-        <!-- Contenitore flessibile per testo e immagine -->
+        </h2>
+        <h2 style="text-align: center; color: #006888; font-size: 16px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
+            <p>Santa Marinella, Civitavecchia, Ostia</p>
+        </h2>
+
         <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap;">
             <!-- Testo a sinistra -->
             <div style="flex: 2; text-align: justify;">
                 <p><strong>SOSTEGNO PSICOLOGICO O CONSULENZA</strong><br>
-                    Si rivolge al singolo individuo, affrontando tematiche come la genitorialità. Offrire un sostegno psicologico significa cercare insieme un modo per superare un momento di stress o difficoltà.
+                    Si rivolge al singolo individuo, affrontando tematiche come la genitorialità.
                 </p>
                 <p><strong>PREVENZIONE</strong><br>
-                    L’obiettivo è promuovere il benessere psicofisico tramite la creazione di un progetto ad hoc, che può essere strutturato in base al tipo di intervento richiesto. Gli ambiti spaziano da scuole a contesti sportivi.
+                    L’obiettivo è promuovere il benessere psicofisico tramite la creazione di un progetto personalizzato.
                 </p>
                 <p><strong>SERVIZIO RIABILITATIVO</strong><br>
-                    L’esperienza maturata nella Riabilitazione per adulti ed adolescenti con disturbi del neurosviluppo mi ha portato a sviluppare un metodo di intervento in cui la relazione è al centro del progetto.
+                    L’esperienza maturata nella Riabilitazione per adulti e adolescenti con disturbi del neurosviluppo.
                 </p>
             </div>
-            <!-- Immagine a destra, centrata -->
-            <div style="flex: 1; text-align: center; display: flex; justify-content: center; align-items: center;">
+
+            <!-- Contenitore immagine con testo al passaggio del mouse -->
+            <div style="flex: 1; text-align: center; display: flex; justify-content: center; align-items: center; position: relative;">
                 <img src="{{ url_for('static', filename='images/hand.jpg') }}" alt="Riabilitazione" 
                      style="width: 80%; height: auto; border-radius: 1px;">
-                     
-                <!-- Testo nascosto che appare al passaggio del mouse -->
-                <div style="position: absolute; bottom: 10px; background: rgba(0, 0, 0, 0.6); 
-                color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; 
-                opacity: 0; transition: opacity 0.3s ease; pointer-events: none;">
-            Immagine presa da <strong>Freepik</strong>
+                <div style="position: absolute; bottom: 5px; background: rgba(0, 0, 0, 0.6); 
+                            color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; 
+                            opacity: 0; transition: opacity 0.3s ease;">
+                    Immagine presa da <strong>www.freepik.com</strong>
+                </div>
+            </div>
         </div>
     </div>
-    <style>
-    /* Mostra il testo quando il mouse passa sopra l'immagine */
-        div:hover div {
-            opacity: 1;
-        }
-    </style>
-
-        </div>
-    </div>
-
 </section>
+
+<!-- Stile per mostrare il testo al passaggio del mouse -->
+<style>
+    div:hover > div {
+        opacity: 1;
+    }
+</style>
+
 {% endblock %}
