@@ -28,8 +28,13 @@
         <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap;">
             <!-- Immagine a sinistra, centrata -->
             <div style="flex: 1; text-align: center; display: flex; justify-content: center; align-items: center;">
-                <img src="{{ url_for('static', filename='images/note1.jpg') }}" alt="Psicoterapia" 
+                <div class="caption">
+                    <img src="{{ url_for('static', filename='images/note1.jpg') }}" alt="Psicoterapia" 
                      style="width: 80%; height: auto; border-radius: 1px;">
+                    <span>
+                        www.freepik.com
+                    </span>
+                </div>   
             </div>
             <!-- Testo a destra -->
             <div style="flex: 2; text-align: justify;">
@@ -72,14 +77,13 @@
             </div>
             <!-- Immagine a destra, centrata -->
             <div style="flex: 1; text-align: center; display: flex; justify-content: center; align-items: center;">
-                <img src="{{ url_for('static', filename='images/hand.jpg') }}" alt="Riabilitazione" 
+                <div class="caption">
+                    <img src="{{ url_for('static', filename='images/hand.jpg') }}" alt="Riabilitazione" 
                      style="width: 80%; height: auto; border-radius: 1px;">
-
-                     <div class="caption">
-                        <span>
-                           <strong>www.freepik.com</strong>
-                        </span>
-                     </div>
+                    <span>
+                        www.freepik.com
+                    </span>
+                </div>
         </div>
     </div>
 
