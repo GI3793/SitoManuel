@@ -23,27 +23,22 @@
         </h2>
 
         <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap;">
-            <!-- Contenitore immagine con testo al passaggio del mouse -->
-            <div style="flex: 1; text-align: center; display: flex; justify-content: center; align-items: center; position: relative;">
-                <img src="{{ url_for('static', filename='images/note1.jpg') }}" alt="Psicoterapia" 
-                     style="width: 80%; height: auto; border-radius: 1px;">
-                <div style="position: absolute; bottom: 5px; background: rgba(0, 0, 0, 0.6); 
-                            color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; 
-                            opacity: 0; transition: opacity 0.3s ease;">
-                    Immagine presa da <strong>www.freepik.com</strong>
-                </div>
+            <!-- Contenitore immagine -->
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/note1.jpg') }}" alt="Psicoterapia">
+                <div class="hover-text">Immagine presa da <strong>Freepik</strong></div>
             </div>
 
             <!-- Testo a destra -->
             <div style="flex: 2; text-align: justify;">
                 <p><strong>LA PSICOTERAPIA PSICODINAMICA INTEGRATA</strong><br>
-                    È il Metamodello per la cura in Psicoterapia che ho appreso e continuo ad approfondire anche dopo il diploma in qualità di Tutor presso l’Istituto di Psicoterapia Psicodinamica Integrata con sede a Firenze.
+                    È il Metamodello per la cura in Psicoterapia che ho appreso e continuo ad approfondire.
                 </p>
                 <p><strong>LA PSICOTERAPIA FOCALIZZATA SUL TRANSFERT</strong><br>
-                    La Transference-Focused Psychotherapy è il prodotto del gruppo diretto da Otto Kernberg presso il Personality Disorders Institute del Weill Cornell Medical College.
+                    Metodo sviluppato da Otto Kernberg presso il Personality Disorders Institute.
                 </p>
                 <p><strong>L’ANALISI TRANSAZIONALE</strong><br>
-                    L’Analisi Transazionale è una teoria della personalità e un sistema di psicoterapia ideato da Eric Berne.
+                    Ideata da Eric Berne, permette di comprendere meglio la psiche.
                 </p>
             </div>
         </div>
@@ -65,22 +60,17 @@
                     Si rivolge al singolo individuo, affrontando tematiche come la genitorialità.
                 </p>
                 <p><strong>PREVENZIONE</strong><br>
-                    L’obiettivo è promuovere il benessere psicofisico tramite la creazione di un progetto personalizzato.
+                    L’obiettivo è promuovere il benessere psicofisico tramite un progetto personalizzato.
                 </p>
                 <p><strong>SERVIZIO RIABILITATIVO</strong><br>
-                    L’esperienza maturata nella Riabilitazione per adulti e adolescenti con disturbi del neurosviluppo.
+                    Esperienza maturata nella Riabilitazione per adulti e adolescenti.
                 </p>
             </div>
 
-            <!-- Contenitore immagine con testo al passaggio del mouse -->
-            <div style="flex: 1; text-align: center; display: flex; justify-content: center; align-items: center; position: relative;">
-                <img src="{{ url_for('static', filename='images/hand.jpg') }}" alt="Riabilitazione" 
-                     style="width: 80%; height: auto; border-radius: 1px;">
-                <div style="position: absolute; bottom: 5px; background: rgba(0, 0, 0, 0.6); 
-                            color: white; padding: 5px 10px; border-radius: 4px; font-size: 12px; 
-                            opacity: 0; transition: opacity 0.3s ease;">
-                    Immagine presa da <strong>www.freepik.com</strong>
-                </div>
+            <!-- Contenitore immagine -->
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/hand.jpg') }}" alt="Riabilitazione">
+                <div class="hover-text">Immagine presa da <strong>Freepik</strong></div>
             </div>
         </div>
     </div>
@@ -88,7 +78,34 @@
 
 <!-- Stile per mostrare il testo al passaggio del mouse -->
 <style>
-    div:hover > div {
+    .image-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    .image-container img {
+        width: 80%;
+        height: auto;
+        border-radius: 1px;
+        display: block;
+    }
+
+    .hover-text {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        white-space: nowrap;
+    }
+
+    .image-container:hover .hover-text {
         opacity: 1;
     }
 </style>
