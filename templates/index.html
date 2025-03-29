@@ -1,89 +1,87 @@
 {% extends 'base.html' %}
 
-{% block title %}Homepage{% endblock %}
+{% block title %}Di cosa mi occupo{% endblock %}
 
 {% block content %}
-<section style="max-width: 100%; display: flex; flex-direction: column; align-items: center;">
+<section style="max-width: 100%; margin: 0 auto;">
 
-    <!-- Titolo principale senza margini laterali -->
-    <div style="background: rgba(245, 241, 233, 0.2); padding: 20px; text-align: center; 
-            font-weight: bold; color: #006888; 
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); border-radius: 6px;
-            width: 100%; margin: 20px 0;">
-        <p style="font-size: 36px; font-weight: bold; margin: 5px 0;">
-            DOTT. MANUEL LUCIANI
-        </p>
-        <p style="font-size: 25px; margin: 5px 0; text-shadow: none;">
-            Psicologo, Psicoterapeuta<br>
-            A Santa Marinella, Civitavecchia e Ostia
-        </p>
-        <p style="font-size: 19px; margin: 5px 0; text-shadow: none; font-weight: normal;">
-            Psicoterapeuta Psicodinamico Integrato<br>
-            Didacting Training Graduate nella Psicoterapia Focalizzata sul Transfert (TFP)<br>
-            Analisi Transazionale: Allievo in supervisione in contratto con l’EATA/ITAA<br>
-            Tutor presso la Scuola di Specializzazione "Istituto di Psicoterapia Psicodinamica Integrata"
-        </p>
+    <!-- Titolo principale con sfondo crema e blu scuro nel testo -->
+    <div style="padding: 15px; text-align: center; 
+                font-size: 33px; font-weight: bold; color: #d59245;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); border-radius: 6px;">
+        DI COSA MI OCCUPO
     </div>
 
     <br>
-
-    <!-- Contenitore dei riquadri -->
-    <div style="display: flex; flex-direction: column; gap: 20px; align-items: center; width: 100%; max-width: 1200px;">
-
-        {% set box_style = "text-align: left; background: rgba(245, 241, 233, 0.5); 
-                            padding: 20px; border-radius: 8px; box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); 
-                            width: 100%; margin: 0 auto; box-sizing: border-box;" %}
-
-        <!-- 1° riquadro -->
-        <a href="/myjob" style="text-decoration: none; color: inherit; width: 100%; max-width: 1200px;">
-            <div style="{{ box_style }}">
-                <img src="{{ url_for('static', filename='images/2.jpg') }}" alt="Psicoterapia" 
-                     style="width: 100%; height: 200px; object-fit: contain; border-radius: 6px;">
-                <div style="font-size: 24px; color: #004f59; margin-top: 10px;">
-                    <div style="font-weight: bold;">PSICOTERAPIA</div>
-                    <ul style="list-style: none; padding: 0; font-size: 16px;">
-                        <li>In presenza e Online. Individuale o di coppia. Adulti, Adolescenti, Bambini</li>
-                        <li><strong>A cosa serve?</strong></li>
-                        <li>✅ Prendere consapevolezza. "Voglio capire; Voglio esplorare come mai accade questo"</li>
-                        <li>✅ Cambiare un comportamento. "Voglio iniziare a fare...; Voglio fermarmi a fare..."</li>
-                        <li>✅ Sintomi specifici. Ansia, Depressione, Sintomi Somatici ecc...</li>
-                        <li>✅ Psicoterapia del profondo e della personalità</li>
-                    </ul>
-                </div>
+    
+    <!-- Sezione 1: Psicoterapia e Psicoterapia Online -->
+    <div style="background: rgba(245, 241, 233, 0.5); padding: 20px; border-radius: 6px; margin-bottom: 40px;">
+        <h2 style="text-align: center; color: #006888; 
+                   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
+        PSICOTERAPIA E PSICOTERAPIA ONLINE
+        </h2>
+        <h3 style="text-align: center; color: #006888; font-size: 16px; margin-bottom: 20px;">
+            <p>Santa Marinella, Civitavecchia</p>
+        </h3>
+        
+        <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; flex-direction: column;">
+            <div class="caption" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+                <img src="{{ url_for('static', filename='images/note1.jpg') }}" alt="Psicoterapia" 
+                     style="width: 80%; height: auto; border-radius: 1px;">
             </div>
-        </a>
-
-        <!-- 2° riquadro -->
-        <a href="/myjob" style="text-decoration: none; color: inherit; width: 100%; max-width: 1200px;">
-            <div style="{{ box_style }}">
-                <img src="{{ url_for('static', filename='images/1a.jpg') }}" alt="Riabilitazione" 
-                     style="width: 100%; height: 200px; object-fit: contain; border-radius: 6px;">
-                <div style="font-size: 24px; color: #004f59; margin-top: 10px;">
-                    <div style="font-weight: bold;">SOSTEGNO, PREVENZIONE E RIABILITAZIONE</div>
-                    <ul style="list-style: none; padding: 0; font-size: 16px;">
-                        <li>🌱La riabilitazione psicologica comprende quelle attività volte al recupero di abilità o competenze che hanno subito un deterioramento dovuto a deficit neuropsicologici o dipendenze.</li>
-                        <li>🌱Il sostegno psicologico è tenuto verso il benessere della persona, del gruppo o di una istituzione. L'obiettivo può essere il miglioramento della qualità della vita potenziando i punti di forza per adattarsi alle situazioni di disagio.</li>
-                    </ul>
-                </div>
+            <div style="width: 100%; text-align: justify;">
+                <p><strong>LA PSICOTERAPIA PSICODINAMICA INTEGRATA</strong><br>
+                    È il Metamodello per la cura in Psicoterapia che ho appreso e continuo ad approfondire anche dopo il diploma in qualità di Tutor presso l’Istituto di Psicoterapia Psicodinamica Integrata con sede a Firenze. Questo Metamodello rappresenta la cornice di riferimento centrale del mio approccio psicoterapico.
+                </p>
+                <p><strong>LA PSICOTERAPIA FOCALIZZATA SUL TRANSFERT</strong><br>
+                    La Transference-Focused Psychotherapy è il prodotto del gruppo diretto da Otto Kernberg presso il Personality Disorders Institute del Weill Cornell Medical College. Ricopre un posto di rilievo tra le psicoterapie basate sull’evidenza.
+                </p>
+                <p><strong>L’ANALISI TRANSAZIONALE</strong><br>
+                    L’Analisi Transazionale è una teoria della personalità ed un sistema di psicoterapia, con applicazioni anche nel Counseling, per i Gruppi e nel mondo delle Organizzazioni. È stata ideata sin dalla metà degli anni ’50 da Eric Berne. A mio parere è un modo di intendere la psiche molto intuitivo e comprensibile, che permette al paziente di conoscersi meglio senza perdere la profondità dell’eredità psicoanalitica.
+                </p>
             </div>
-        </a>
-
-        <!-- 3° riquadro -->
-        <a href="/contact" style="text-decoration: none; color: inherit; width: 100%; max-width: 1200px;">
-            <div style="{{ box_style }}">
-                <img src="{{ url_for('static', filename='images/4.jpg') }}" alt="Contatti" 
-                     style="width: 100%; height: 200px; object-fit: contain; border-radius: 6px;">
-                <div style="font-size: 24px; color: #004f59; margin-top: 10px;">
-                    <div style="font-weight: bold;">CONTATTI</div>
-                    <ul style="list-style: none; padding: 0; font-size: 16px;">
-                        <li>🧠Accoglienza, sicurezza, ascolto.❤️</li>
-                        <li>👉Contattami per iniziare il tuo percorso.</li>
-                    </ul>
-                </div>
-            </div>
-        </a>
-
+        </div>
     </div>
-
+    
+    <!-- Sezione 2: Sostegno, Prevenzione e Riabilitazione -->
+    <div style="background: rgba(245, 241, 233, 0.5); padding: 20px; border-radius: 6px;">
+        <h2 style="text-align: center; color: #006888; 
+                   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
+            SOSTEGNO, PREVENZIONE E RIABILITAZIONE
+        </h2>
+        <h3 style="text-align: center; color: #006888; font-size: 16px; margin-bottom: 20px;">
+            <p>Santa Marinella, Civitavecchia, Ostia</p>
+        </h3>
+        
+        <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; flex-direction: column;">
+            <div style="width: 100%; text-align: justify;">
+                <p><strong>SOSTEGNO PSICOLOGICO O CONSULENZA</strong><br>
+                    Si rivolge al singolo individuo, affrontando tematiche come la genitorialità. Offrire un sostegno psicologico significa cercare insieme un modo per superare un momento di stress o difficoltà.
+                </p>
+                <p><strong>PREVENZIONE</strong><br>
+                    L’obiettivo è promuovere il benessere psicofisico tramite la creazione di un progetto ad hoc, che può essere strutturato in base al tipo di intervento richiesto. Gli ambiti spaziano da scuole a contesti sportivi.
+                </p>
+                <p><strong>SERVIZIO RIABILITATIVO</strong><br>
+                    L’esperienza maturata nella Riabilitazione per adulti ed adolescenti con disturbi del neurosviluppo mi ha portato a sviluppare un metodo di intervento in cui la relazione è al centro del progetto.
+                </p>
+            </div>
+            <div class="caption" style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+                <img src="{{ url_for('static', filename='images/hand.jpg') }}" alt="Riabilitazione" 
+                     style="width: 80%; height: auto; border-radius: 1px;">
+            </div>
+        </div>
+    </div>
 </section>
+
+<style>
+@media (min-width: 768px) {
+    div[style*="display: flex;"] {
+        flex-direction: row !important;
+    }
+    div[style*="text-align: center;"] img {
+        align-self: flex-start;
+    }
+}
+</style>
+
 {% endblock %}
