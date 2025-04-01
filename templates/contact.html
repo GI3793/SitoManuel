@@ -48,6 +48,8 @@
                 <p>📌 <a href="https://www.stateofmind.it/author/lucianimanuel/" target="_blank">Autore - State of Mind</a></p>
                 <br>
 
+
+                
                 <!-- Social -->
                 <p><strong>Mi trovi anche su:</strong></p>
                 <a href="https://www.linkedin.com/in/manuel-luciani-a07357138/" target="_blank">
@@ -60,11 +62,23 @@
                     <img src="{{ url_for('static', filename='images/fb.png') }}" alt="Facebook" width="30">
                 </a>
 
-            </div>
+                <div id="iw_widget_a6600ab13c7628e9604767df007443924a9ef70d" class="WidgetContainer" style="text-align: center;margin:0 auto;"><div style="display: block;font-style: italic;font-size: 8px;margin-top: 3px;line-height:1.0em !important;">Psicologo iscritto all'albo e verificato<br>da <a href="https://www.psicologi-italia.it/" target="_blank" style="text-decoration: none;">Psicologi-Italia.it</a></div></div>
+                <script>
+                (function(doc, tag, id){
+                    var js = doc.getElementsByTagName(tag)[0];
+                    if (doc.getElementById(id)) {return;}
+                    js = doc.createElement(tag);
+                    js.id = id;
+                    js.src = "https://www.psicologi-italia.it/api/psicologo/manuel-luciani/psi-widget.js";
+                    js.type = "text/javascript";
+                    doc.body.appendChild(js);
+                    }(document, 'script', 'widgetId_a6600ab13c7628e9604767df007443924a9ef70d'));
+                    </script>
+                    </div>
 
             <!-- Colonna con immagine e Google Maps -->
             <div style="flex: 1; text-align: center; display: flex; flex-direction: column; align-items: center;">
-                <img src="{{ url_for('static', filename='images/contact.jpg') }}" alt="Studio Psicologico" 
+                <img src="{{ url_for('static', filename='images/contact.jpg') }}" alt="Studio Psicologico" class="desktop-only"
                      style="width: 90%; height: auto; border-radius: 3px; margin-bottom: 15px;">
                 
                 <!-- Google Maps -->
