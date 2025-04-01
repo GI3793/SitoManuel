@@ -191,5 +191,40 @@ main {
     }
 }
 
+/* mdifiche da qui */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 18px; /* Testo più leggibile */
+        line-height: 1.8; /* Più spazio tra le righe */
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 
+header nav a {
+    display: inline-block;
+    padding: 10px 15px; /* Pulsanti più grandi */
+    font-size: 18px; /* Più leggibili */
+}
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
