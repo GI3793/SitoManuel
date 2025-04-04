@@ -5,7 +5,7 @@
 {% block content %}
 <section style="max-width: 100%; margin: 0 auto;">
 
-    <!-- Titolo principale con sfondo crema e testo blu ottanio -->
+    <!-- Titolo -->
     <div style="padding: 15px; text-align: center; 
                 font-size: 33px; font-weight: bold; color: #d59245;
                 text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); border-radius: 6px;">
@@ -14,32 +14,34 @@
     <br>
 
     <div style="background: rgba(245, 241, 233, 0.5); padding: 20px; border-radius: 6px; margin-bottom: 40px;">
-        <div style="display: flex; justify-content: center; align-items: flex-start; font-size: 16px">
-            <div style="flex: 2; padding-right: 20px;">
+        
+        <!-- Wrapper flessibile -->
+        <div class="contact-wrapper" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+
+            <!-- Colonna principale -->
+            <div class="contact-text" style="flex: 1 1 350px; max-width: 600px;">
 
                 <p>Il primo passo verso il cambiamento è una scelta personale spesso guidata da profonde ragioni psicologiche. Qualunque esse siano troverai un ambiente sicuro, accogliente e riservato dove poter costruire insieme un percorso possibile.</p>
-                <p>Ogni persona è unica e può sentirsi libera di scegliere, se desideri iniziare questo percorso su misura ecco come contattarmi:
-                </p>
+                <p>Ogni persona è unica e può sentirsi libera di scegliere. Se desideri iniziare questo percorso su misura, ecco come contattarmi:</p>
                 <br>
 
-                <!-- Contatti con icone -->
-                <p><strong>📧e-mail:</strong>
-                <p><a href="mailto:lucianimanuel12@gmail.com">lucianimanuel12@gmail.com</a>
-                <p><a href="mailto:manuelluciani@psypec.it">manuelluciani@psypec.it</a><br>
-                </p><br>
-                <p><strong>📞Telefono:</strong>
-                <p>+39 338 735 3638</p><br>
-                </p>
-                <p>
-                <strong>📍Studio:</strong> 
-                <p>Via Vincenzo Annovazzi, 15, Civitavecchia
-                </p>
+                <!-- Contatti -->
+                <p><strong>📧 E-mail:</strong></p>
+                <p><a href="mailto:lucianimanuel12@gmail.com">lucianimanuel12@gmail.com</a></p>
+                <p><a href="mailto:manuelluciani@psypec.it">manuelluciani@psypec.it</a></p>
                 <br>
-                <strong>💻Servizi online:</strong> 
+
+                <p><strong>📞 Telefono:</strong></p>
+                <p>+39 338 735 3638</p><br>
+
+                <p><strong>📍 Studio:</strong></p>
+                <p>Via Vincenzo Annovazzi, 15, Civitavecchia</p><br>
+
+                <p><strong>💻 Servizi online:</strong></p>
                 <p>Psicologia e Psicoterapia Online, accessibile in modo semplice e sicuro.</p><br>
 
-                <strong>🌍Sedi di intervento:</strong> 
-                <p>Servizio di Prevenzione, Psicologia Scolastica, Riabilitazione a Civitavecchia, Santa Marinella e Ostia.</p><br>
+                <p><strong>🌍 Sedi di intervento:</strong></p>
+                <p>Prevenzione, Psicologia Scolastica, Riabilitazione a Civitavecchia, Santa Marinella e Ostia.</p><br>
 
                 <!-- Link utili -->
                 <p><strong>Per ulteriori approfondimenti:</strong></p>
@@ -48,24 +50,27 @@
                 <p>📌 <a href="https://www.stateofmind.it/author/lucianimanuel/" target="_blank">Autore - State of Mind</a></p>
                 <br>
 
-
-                
                 <!-- Social -->
                 <p><strong>Mi trovi anche su:</strong></p>
-                <a href="https://www.linkedin.com/in/manuel-luciani-a07357138/" target="_blank">
-                    <img src="{{ url_for('static', filename='images/in1.webp') }}" alt="LinkedIn" width="35">
-                </a>
-                <a href="https://www.instagram.com/manuelluciani.psicoterapia/" target="_blank">
-                    <img src="{{ url_for('static', filename='images/ig1.webp') }}" alt="Instagram" width="35">
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=100063626947726/" target="_blank">
-                    <img src="{{ url_for('static', filename='images/fb.webp') }}" alt="Facebook" width="35">
-                </a>
-                <br>
-                <div id="iw_widget_a6600ab13c7628e9604767df007443924a9ef70d" 
-                class="WidgetContainer" 
-                style="text-align: center; margin-left:0; margin-right: auto; display: block; width: fit-content;">
-                <div style="display: block;font-style: italic;font-size: 8px;margin-top: 3px;line-height:1.0em !important;">Psicologo iscritto all'albo e verificato<br>da <a href="https://www.psicologi-italia.it/" target="_blank" style="text-decoration: none;">Psicologi-Italia.it</a></div></div>
+                <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 10px;">
+                    <a href="https://www.linkedin.com/in/manuel-luciani-a07357138/" target="_blank">
+                        <img src="{{ url_for('static', filename='images/in1.webp') }}" alt="LinkedIn" width="35">
+                    </a>
+                    <a href="https://www.instagram.com/manuelluciani.psicoterapia/" target="_blank">
+                        <img src="{{ url_for('static', filename='images/ig1.webp') }}" alt="Instagram" width="35">
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100063626947726/" target="_blank">
+                        <img src="{{ url_for('static', filename='images/fb.webp') }}" alt="Facebook" width="35">
+                    </a>
+                </div>
+
+                <!-- Widget Psicologi Italia -->
+                <div id="iw_widget_a6600ab13c7628e9604767df007443924a9ef70d" class="WidgetContainer" style="text-align: center; margin: 0 auto;">
+                    <div style="font-style: italic; font-size: 8px; margin-top: 3px; line-height: 1em !important;">
+                        Psicologo iscritto all'albo e verificato<br>
+                        da <a href="https://www.psicologi-italia.it/" target="_blank" style="text-decoration: none;">Psicologi-Italia.it</a>
+                    </div>
+                </div>
                 <script>
                 (function(doc, tag, id){
                     var js = doc.getElementsByTagName(tag)[0];
@@ -75,22 +80,27 @@
                     js.src = "https://www.psicologi-italia.it/api/psicologo/manuel-luciani/psi-widget.js";
                     js.type = "text/javascript";
                     doc.body.appendChild(js);
-                    }(document, 'script', 'widgetId_a6600ab13c7628e9604767df007443924a9ef70d'));
-                    </script>
-                    </div>
+                }(document, 'script', 'widgetId_a6600ab13c7628e9604767df007443924a9ef70d'));
+                </script>
 
-            <!-- Colonna con immagine e Google Maps -->
-            <div style="flex: 1; text-align: center; display: flex; flex-direction: column; align-items: center;">
-                <img src="{{ url_for('static', filename='images/contact.jpg') }}" alt="Studio Psicologico" class="desktop-only"
-                     style="width: 90%; height: auto; border-radius: 3px; margin-bottom: 15px;">
-                
-                <!-- Google Maps -->
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.492201336268!2d11.800502676015896!3d42.09092887116716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f72b9c3d749b5%3A0xc6e3dfcd00d0f045!2sVia%20Vincenzo%20Annovazzi%2C%2015%2C%2000000%20Civitavecchia%20RM%2C%20Italia!5e0!3m2!1sit!2sit!4v1700000000000" 
-                    width="90%" height="250" style="border-radius: 3px; border: 0;" allowfullscreen="" loading="lazy">
-                </iframe>
             </div>
+
+            <!-- Colonna immagine -->
+            <div class="contact-img" style="flex: 1 1 300px; text-align: center;">
+                <img src="{{ url_for('static', filename='images/contact.jpg') }}" alt="Studio Psicologico"
+                     style="width: 90%; height: auto; border-radius: 3px; margin-bottom: 15px;" class="desktop-only">
+            </div>
+
         </div>
+
+        <!-- Google Maps – separato per mobile -->
+        <div class="map-container" style="text-align: center; margin-top: 30px;">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.492201336268!2d11.800502676015896!3d42.09092887116716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f72b9c3d749b5%3A0xc6e3dfcd00d0f045!2sVia%20Vincenzo%20Annovazzi%2C%2015%2C%2000000%20Civitavecchia%20RM%2C%20Italia!5e0!3m2!1sit!2sit!4v1700000000000" 
+                width="90%" height="250" style="border-radius: 3px; border: 0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+
     </div>
 </section>
 {% endblock %}
