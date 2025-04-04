@@ -41,11 +41,17 @@
         {% block content %}{% endblock %}
     </main>
     <footer>
-        <div class="footer-container" style="display: flex; flex-wrap: wrap; justify-content: space-between; padding: 20px;">
+        <div class="footer-container" style="
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 20px;
+        ">
             <!-- Colonna sinistra -->
-            <div class="footer-left">
+            <div class="footer-left" style="flex: 1 1 300px;">
                 <p><strong>Contatti:</strong></p>
-                <ul>
+                <ul style="padding-left: 20px; margin: 0;">
                     <li>Telefono: +39 3387353638</li>
                     <li>Email: 
                         <a href="mailto:lucianimanuel12@gmail.com">lucianimanuel12@gmail.com</a><br>
@@ -59,51 +65,64 @@
             </div>
     
             <!-- Colonna destra -->
-            <div class="footer-right" style="text-align: right;">
-                <p><strong>Mi trovi anche su:</strong></p>
-                <div style="display: flex; gap: 15px; justify-content: flex-end; align-items: center;">
-                    <a href="https://www.instagram.com/tuoprofilo" target="_blank">
-                        <img src="instagram_logo.png" alt="Instagram" style="width: 40px; height: 40px;">
-                    </a>
-                    <a href="https://www.facebook.com/tuoprofilo" target="_blank">
-                        <img src="facebook_logo.png" alt="Facebook" style="width: 40px; height: 40px;">
-                    </a>
-                    <a href="https://www.linkedin.com/in/tuoprofilo" target="_blank">
-                        <img src="linkedin_logo.png" alt="LinkedIn" style="width: 40px; height: 40px;">
-                    </a>
-                </div>
-    
-                <!-- Widget sotto le icone -->
-                <div style="margin-top: 15px; display: flex; justify-content: flex-end;">
-                    <div id="iw_widget_a6600ab13c7628e9604767df007443924a9ef70d" class="WidgetContainer" style="text-align: center;">
-                        <div style="display: block; font-style: italic; font-size: 8px; margin-top: 3px; line-height: 1.0em !important;">
-                            Psicologo iscritto all'albo e verificato<br>
-                            da <a href="https://www.psicologi-italia.it/" target="_blank" style="text-decoration: none;">Psicologi-Italia.it</a>
-                        </div>
-                    </div>
-                </div>
+            <!-- Colonna destra -->
+<div class="footer-right" style="flex: 1 1 300px; text-align: right;">
+    <p><strong>Mi trovi anche su:</strong></p>
+    <div style="display: flex; gap: 15px; justify-content: flex-end; flex-wrap: wrap;">
+        <a href="https://www.linkedin.com/in/manuel-luciani-a07357138/" target="_blank">
+            <img src="{{ url_for('static', filename='images/in1.webp') }}" alt="LinkedIn" class="social-icon" style="width: 40px; height: 40px;">
+        </a>
+        <a href="https://www.instagram.com/manuelluciani.psicoterapia/" target="_blank">
+            <img src="{{ url_for('static', filename='images/ig1.webp') }}" alt="Instagram" class="social-icon" style="width: 40px; height: 40px;">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100063626947726/" target="_blank">
+            <img src="{{ url_for('static', filename='images/fb.webp') }}" alt="Facebook" class="social-icon" style="width: 40px; height: 40px;">
+        </a>
+        <a href="https://www.psicologi-italia.it/psicologo/manuel-luciani.html/" target="_blank">
+            <img src="{{ url_for('static', filename='images/pi.png') }}" alt="Psicologi Italia" class="social-icon" style="width: 40px; height: 40px;">
+        </a>
+    </div>
+
+    <!-- Widget sotto le icone -->
+    <div style="margin-top: 15px; display: flex; justify-content: flex-end;">
+        <div id="iw_widget_a6600ab13c7628e9604767df007443924a9ef70d" class="WidgetContainer" style="text-align: center;">
+            <div style="display: block; font-style: italic; font-size: 8px; margin-top: 3px; line-height: 1.0em !important;">
+                Psicologo iscritto all'albo e verificato<br>
+                da <a href="https://www.psicologi-italia.it/" target="_blank" style="text-decoration: none;">Psicologi-Italia.it</a>
             </div>
         </div>
+    </div>
+
+    <!-- Script widget -->
+    <script>
+        (function(doc, tag, id){
+            var js = doc.getElementsByTagName(tag)[0];
+            if (doc.getElementById(id)) { return; }
+            js = doc.createElement(tag);
+            js.id = id;
+            js.src = "https://www.psicologi-italia.it/api/psicologo/manuel-luciani/psi-widget.js";
+            js.type = "text/javascript";
+            doc.body.appendChild(js);
+        }(document, 'script', 'widgetId_a6600ab13c7628e9604767df007443924a9ef70d'));
+    </script>
     
-        <!-- Copyright -->
-        <div style="text-align: center; padding: 10px; margin-top: 20px;">
-            <p style="margin: 0;">&copy; 2025 by Dott. Manuel Luciani Psicologo, Psicoterapeuta</p>
-        </div>
-    
-        <!-- Script widget -->
-        <script>
-            (function(doc, tag, id){
-                var js = doc.getElementsByTagName(tag)[0];
-                if (doc.getElementById(id)) { return; }
-                js = doc.createElement(tag);
-                js.id = id;
-                js.src = "https://www.psicologi-italia.it/api/psicologo/manuel-luciani/psi-widget.js";
-                js.type = "text/javascript";
-                doc.body.appendChild(js);
-            }(document, 'script', 'widgetId_a6600ab13c7628e9604767df007443924a9ef70d'));
-        </script>
+        <!-- Media Query (mobile styling) -->
+        <style>
+            @media (max-width: 768px) {
+                .footer-container {
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                .footer-left, .footer-right {
+                    text-align: center !important;
+                }
+                .footer-right div {
+                    justify-content: center !important;
+                }
+            }
+        </style>
     </footer>
-    
     
 </body>
 </html>
