@@ -51,7 +51,7 @@
             <!-- Colonna sinistra -->
             <div class="footer-left" style="flex: 1 1 300px;">
                 <p><strong>Contatti:</strong></p>
-                <ul style="padding-left: 20px; margin: 0;">
+                <ul style="padding-left: 10px; margin: 0;">
                     <li>Telefono: +39 3387353638</li>
                     <li>Email: 
                         <a href="mailto:lucianimanuel12@gmail.com">lucianimanuel12@gmail.com</a><br>
@@ -64,7 +64,7 @@
                 </ul>
             </div>
     
-            <!-- Colonna destra -->
+
             <!-- Colonna destra -->
 <div class="footer-right" style="flex: 1 1 300px; text-align: right;">
     <p><strong>Mi trovi anche su:</strong></p>
@@ -82,7 +82,7 @@
             <img src="{{ url_for('static', filename='images/pi.png') }}" alt="Psicologi Italia" class="social-icon" style="width: 40px; height: 40px;">
         </a>
     </div>
-    
+
         <!-- Media Query (mobile styling) -->
         <style>
             @media (max-width: 768px) {
@@ -90,12 +90,27 @@
                     flex-direction: column;
                     align-items: center;
                     text-align: center;
+                    width: 100%;
+                    padding: 0 15px;
+                    box-sizing: border-box;
                 }
+
                 .footer-left, .footer-right {
                     text-align: center !important;
+                    width: 100%;
+                    padding: 10px 0;
                 }
+
                 .footer-right div {
                     justify-content: center !important;
+                }
+
+                .social-icon {
+                margin: 0 8px;
+                }
+
+                .WidgetContainer {
+                    margin: 10px auto !important;
                 }
             }
         </style>
