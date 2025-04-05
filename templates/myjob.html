@@ -28,9 +28,8 @@
         <!-- Contenitore flessibile per immagine e testo -->
         <div style="display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap;">
             <!-- Immagine a sinistra, centrata -->
-            <div style="flex: 1; text-align: center;">
-                <img src="{{ url_for('static', filename='images/note1.jpg') }}" alt="Psicoterapia" class="desktop-only"
-                     style="width: 70%; height: auto; border-radius: 4px;">
+            <div class="img-col desktop-only">
+                <img src="{{ url_for('static', filename='images/note1.jpg') }}" alt="Psicoterapia">
             </div>
             <!-- Testo a destra -->
             <div style="flex: 2; text-align: justify;">
@@ -73,12 +72,54 @@
                 </p>
             </div>
             <!-- Immagine a destra, centrata -->
-            <div style="flex: 1; text-align: center;">
-                <img src="{{ url_for('static', filename='images/hand.jpg') }}" alt="Riabilitazione" class="desktop-only"
-                     style="width: 70%; height: auto; border-radius: 4px;">
+            <div class="img-col desktop-only">
+                <img src="{{ url_for('static', filename='images/hand.jpg') }}" alt="Riabilitazione">
             </div>
         </div>
     </div>
 
 </section>
+
+<!-- CSS per layout responsive -->
+<style>
+    .section-flex {
+        display: flex;
+        gap: 40px;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    .img-col {
+        flex: 1;
+        text-align: center;
+    }
+
+    .img-col img {
+        width: 70%;
+        height: auto;
+        border-radius: 4px;
+    }
+
+    .text-col {
+        flex: 2;
+        text-align: justify;
+    }
+
+    /* Nasconde immagini su mobile e resetta layout in colonna */
+    @media (max-width: 768px) {
+        .desktop-only {
+            display: none !important;
+        }
+
+        .section-flex {
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .text-col {
+            width: 100%;
+        }
+    }
+</style>
 {% endblock %}

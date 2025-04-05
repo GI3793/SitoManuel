@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
-{% block title %}Manuel Luciani Psicoterapeuta{% endblock %}
+{% block title %}Manuel Luciani - Psicoterapeuta Civitavecchia{% endblock %}
 
 {% block content %}
 <section style="max-width: 100%; display: flex; flex-direction: column; align-items: center;">
 
-    <!-- Titolo principale senza margini laterali -->
-    <div style="background: rgba(245, 241, 233, 0.2); padding: 20px; text-align: center; 
+    <!-- Titolo principale -->
+    <div class="home-title" style="background: rgba(245, 241, 233, 0.2); padding: 20px; text-align: center; 
             font-weight: bold; color: #006888; 
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); border-radius: 5px;
             width: 100%; margin: 20px 0;">
@@ -25,7 +25,25 @@
         </p>
     </div>
 
+    <!-- Stili per mobile -->
+    <style>
+        @media (max-width: 768px) {
+            .home-title p:nth-of-type(1) {
+                font-size: 28px !important;
+            }
+
+            .home-title p:nth-of-type(2) {
+                font-size: 20px !important;
+            }
+
+            .home-title p:nth-of-type(3) {
+                font-size: 16px !important;
+            }
+        }
+    </style>
+
     <br>
+
 
     <!-- Contenitore dei riquadri -->
     <div style="display: flex; flex-direction: column; gap: 20px; align-items: center; width: 100%; max-width: 1200px;">
