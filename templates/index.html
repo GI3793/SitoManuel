@@ -5,24 +5,13 @@
 {% block content %}
 <section style="max-width: 100%; display: flex; flex-direction: column; align-items: center;">
 
-    <!-- Titolo principale -->
-    <div class="home-title" style="background: rgba(245, 241, 233, 0.2); padding: 20px; text-align: center; 
-            font-weight: bold; color: #006888; 
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); border-radius: 5px;
-            width: 100%; margin: 20px 0;">
-        <p style="font-size: 36px; font-weight: bold; margin: 5px 0;">
-            DOTT. MANUEL LUCIANI
-        </p>
-        <p style="font-size: 25px; margin: 5px 0; text-shadow: none;">
-            Psicologo, Psicoterapeuta<br>
-            A Santa Marinella, Civitavecchia e Ostia
-        </p>
-        <p style="font-size: 19px; margin: 5px 0; text-shadow: none; font-weight: normal;">
-            Psicoterapeuta Psicodinamico Integrato<br>
-            Didacting Training Graduate nella Psicoterapia Focalizzata sul Transfert (TFP)<br>
-            Analisi Transazionale: Allievo in supervisione in contratto con l’EATA/ITAA<br>
-            Tutor presso la Scuola di Specializzazione "Istituto di Psicoterapia Psicodinamica Integrata"
-        </p>
+    <!-- Titolo principale sostituito da immagine -->
+    <div class="home-title"
+        style="background: rgba(245, 241, 233, 0.0); padding: 20px; text-align: center;
+                width: 100%; margin: 20px 0; display: flex; justify-content: center; align-items: center;">
+        <img src="{{ url_for('static', filename='images/home.tif') }}"
+            alt="Dott. Manuel Luciani - Psicologo e Psicoterapeuta"
+            style="max-width: 500px; width: 100%; height: auto; object-fit: contain; background: transparent;">
     </div>
 
     <!-- Stili per mobile -->
