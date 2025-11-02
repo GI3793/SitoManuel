@@ -187,6 +187,61 @@
             </li>
     </div>
 
+        <!-- Sezione Album Attestati e Premi -->
+    <div style="background: rgba(249, 241, 226, 0.6); padding: 30px; border-radius: 8px; margin-bottom: 60px;">
+        <h2 style="text-align: center; color: #006888; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
+            ATTESTATI E PREMI
+        </h2>
+
+        <!-- Galleria -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 20px; justify-items: center; align-items: center;">
+
+            <!-- Sostituisci i nomi file con i tuoi -->
+            <img src="{{ url_for('static', filename='images/attestati/at1.webp') }}" 
+                 alt="Attestato 1" 
+                 style="width: 100%; max-width: 350px; border-radius: 8px; 
+                        box-shadow: 0 4px 10px rgba(0,0,0,0.15); object-fit: contain; background-color: #fff;">
+
+            <img src="{{ url_for('static', filename='images/attestati/at.webp') }}" 
+                 alt="Attestato 2" 
+                 style="width: 100%; max-width: 350px; border-radius: 8px; 
+                        box-shadow: 0 4px 10px rgba(0,0,0,0.15); object-fit: contain; background-color: #fff;">
+
+            <img src="{{ url_for('static', filename='images/attestati/dp.webp') }}" 
+                 alt="Attestato 3" 
+                 style="width: 100%; max-width: 350px; border-radius: 8px; 
+                        box-shadow: 0 4px 10px rgba(0,0,0,0.15); object-fit: contain; background-color: #fff;">
+            
+            <img src="{{ url_for('static', filename='images/attestati/lm1.webp') }}" 
+                 alt="Attestato 3" 
+                 style="width: 100%; max-width: 350px; border-radius: 8px; 
+                        box-shadow: 0 4px 10px rgba(0,0,0,0.15); object-fit: contain; background-color: #fff;">
+
+            <img src="{{ url_for('static', filename='images/attestati/lp.webp') }}" 
+                 alt="Attestato 3" 
+                 style="width: 100%; max-width: 350px; border-radius: 8px; 
+                        box-shadow: 0 4px 10px rgba(0,0,0,0.15); object-fit: contain; background-color: #fff;">
+
+            <img src="{{ url_for('static', filename='images/attestati/lt1.webp') }}" 
+                 alt="Attestato 3" 
+                 style="width: 100%; max-width: 350px; border-radius: 8px; 
+                        box-shadow: 0 4px 10px rgba(0,0,0,0.15); object-fit: contain; background-color: #fff;">
+            
+            <img src="{{ url_for('static', filename='images/attestati/pf.webp') }}" 
+                            alt="Attestato 3" 
+                            style="width: 100%; max-width: 350px; border-radius: 8px; 
+                                    box-shadow: 0 4px 10px rgba(0,0,0,0.15); object-fit: contain; background-color: #fff;">
+
+            <!-- Aggiungi altri immagini come questa -->
+        </div>
+
+        <p style="text-align: center; margin-top: 20px; color: #004f59; font-size: 14px;">
+            *Clicca sulle immagini per ingrandirle (funzionalità opzionale)
+        </p>
+    </div>
+
+
     <!-- Stili per mobile -->
     <style>
         @media (max-width: 768px) {
