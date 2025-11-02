@@ -188,58 +188,67 @@
     </div>
 
         <!-- Sezione Album Attestati e Premi -->
-    <div style="background: rgba(249, 241, 226, 0.6); padding: 30px; border-radius: 8px; margin-bottom: 60px;">
-        <h2 style="text-align: center; color: #006888; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
-            ATTESTATI E PREMI
-        </h2>
+<div style="background: rgba(249, 241, 226, 0.6); padding: 30px; border-radius: 8px; margin-bottom: 60px;">
+  <h2 style="text-align: center; color: #006888; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); margin-bottom: 20px;">
+    GALLERIA IMMAGINI
+  </h2>
 
-        <!-- Galleria -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                    gap: 20px; justify-items: center; align-items: center;">
+  <!-- Galleria -->
+  <div class="gallery-container"
+       style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+              gap: 15px; justify-items: center; align-items: center;">
+    
+    <!-- Thumbnails -->
+    <img src="{{ url_for('static', filename='images/attestati/at1.webp') }}" alt="Attestato 1" class="gallery-thumb">
+    <img src="{{ url_for('static', filename='images/attestati/at.webp') }}" alt="Attestato 2" class="gallery-thumb">
+    <img src="{{ url_for('static', filename='images/attestati/dp.webp') }}" alt="Attestato 3" class="gallery-thumb">
+    <img src="{{ url_for('static', filename='images/attestati/lm1.webp') }}" alt="Attestato 4" class="gallery-thumb">
+    <img src="{{ url_for('static', filename='images/attestati/lp.webp') }}" alt="Attestato 5" class="gallery-thumb">
+    <img src="{{ url_for('static', filename='images/attestati/lt1.webp') }}" alt="Attestato 6" class="gallery-thumb">
+    <img src="{{ url_for('static', filename='images/attestati/pf.webp') }}" alt="Attestato 7" class="gallery-thumb">
+  </div>
 
-            <!-- Sostituisci i nomi file con i tuoi -->
-            <img src="{{ url_for('static', filename='images/attestati/at1.webp') }}" 
-                 alt="Attestato 1" 
-                 style="width: 100%; max-width: 350px; border-radius: 8px; 
-                        box-shadow: 0 4px 10px rgba(0,0,0,0.15); object-fit: contain; background-color: #fff;">
+  <p style="text-align: center; margin-top: 20px; color: #004f59; font-size: 14px;">
+    *Clicca sulle immagini per ingrandirle
+  </p>
+</div>
 
-            <img src="{{ url_for('static', filename='images/attestati/at.webp') }}" 
-                 alt="Attestato 2" 
-                 style="width: 100%; max-width: 350px; border-radius: 8px; 
-                        box-shadow: 0 4px 10px rgba(0,0,0,0.15); object-fit: contain; background-color: #fff;">
+<!-- Lightbox -->
+<div id="lightbox"
+     style="display: none; position: fixed; z-index: 9999; top: 0; left: 0;
+            width: 100%; height: 100%; background: rgba(0,0,0,0.8);
+            justify-content: center; align-items: center;">
+  <img id="lightbox-img"
+       src=""
+       style="max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 0 20px rgba(255,255,255,0.3);">
+</div>
 
-            <img src="{{ url_for('static', filename='images/attestati/dp.webp') }}" 
-                 alt="Attestato 3" 
-                 style="width: 100%; max-width: 350px; border-radius: 8px; 
-                        box-shadow: 0 4px 10px rgba(0,0,0,0.15); object-fit: contain; background-color: #fff;">
-            
-            <img src="{{ url_for('static', filename='images/attestati/lm1.webp') }}" 
-                 alt="Attestato 3" 
-                 style="width: 100%; max-width: 350px; border-radius: 8px; 
-                        box-shadow: 0 4px 10px rgba(0,0,0,0.15); object-fit: contain; background-color: #fff;">
+<!-- Script per ingrandimento -->
+<script>
+  const thumbs = document.querySelectorAll('.gallery-thumb');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
 
-            <img src="{{ url_for('static', filename='images/attestati/lp.webp') }}" 
-                 alt="Attestato 3" 
-                 style="width: 100%; max-width: 350px; border-radius: 8px; 
-                        box-shadow: 0 4px 10px rgba(0,0,0,0.15); object-fit: contain; background-color: #fff;">
+  thumbs.forEach(img => {
+    img.style.cursor = 'zoom-in';
+    img.style.width = '100%';
+    img.style.maxWidth = '150px';
+    img.style.height = 'auto';
+    img.style.borderRadius = '6px';
+    img.style.boxShadow = '0 4px 8px rgba(0,0,0,0.15)';
+    img.style.backgroundColor = '#fff';
+    img.style.objectFit = 'contain';
 
-            <img src="{{ url_for('static', filename='images/attestati/lt1.webp') }}" 
-                 alt="Attestato 3" 
-                 style="width: 100%; max-width: 350px; border-radius: 8px; 
-                        box-shadow: 0 4px 10px rgba(0,0,0,0.15); object-fit: contain; background-color: #fff;">
-            
-            <img src="{{ url_for('static', filename='images/attestati/pf.webp') }}" 
-                            alt="Attestato 3" 
-                            style="width: 100%; max-width: 350px; border-radius: 8px; 
-                                    box-shadow: 0 4px 10px rgba(0,0,0,0.15); object-fit: contain; background-color: #fff;">
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightbox.style.display = 'flex';
+    });
+  });
 
-            <!-- Aggiungi altri immagini come questa -->
-        </div>
-
-        <p style="text-align: center; margin-top: 20px; color: #004f59; font-size: 14px;">
-            *Clicca sulle immagini per ingrandirle (funzionalità opzionale)
-        </p>
-    </div>
+  lightbox.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+</script>
 
 
     <!-- Stili per mobile -->
